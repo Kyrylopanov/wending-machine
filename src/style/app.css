@@ -1,7 +1,7 @@
 /* styles in src/style directory are applied to the whole page */
+
 body {
-  background: #0147A7;
-  color: #fff;
+  color: #727272;
 }
 
 a {
@@ -16,7 +16,131 @@ main {
   display: block;
 }
 
-footer {
+h1 {
+  font-size: 2.5em;
+  color: #727272;
+  text-shadow: none;
+  font-weight: 100;
+  text-transform: none;
+  letter-spacing: 0px;
+  margin-top: 0;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 1.5em;
+  color: #727272;
+  text-shadow: none;
+  font-weight: 100;
+  text-transform: none;
+  letter-spacing: 0px;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 1em;
+  color: #727272;
+  text-shadow: none;
+  font-weight: 100;
+  text-transform: none;
+  letter-spacing: 0px;
+  margin-top: 0;
+}
+
+.md-button.md-icon-button {
+  margin: 4px 10px;
+}
+
+.forSelect {
+  position: relative;
+  display: inline-block;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0 30px 0 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+  line-height: 36px;
+  height: 36px;
+  background: #fff;
+  margin: 0 5px 5px 0;
+  width: 230px;
+}
+
+.forSelect:before {
+  content: '';
+  height: 31px;
+  position: absolute;
+  right: 7px;
+  top: 3px;
+  width: 22px;
+  background: #fff;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  pointer-events: none;
+  display: block;
+}
+
+.forSelect:after {
+  content: '';
+  position: absolute;
+  right: 15px;
+  top: 46%;
+  margin-top: -3px;
+  z-index: 2;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6.9px 4px 0 4px;
+  border-color: #aaa transparent transparent transparent;
+  pointer-events: none;
+}
+
+.forSelectDrinks {
+  margin-top: 15px;
+}
+
+.borderDrinks {
+  position: relative;
+  width: 900px;
+  max-width: 80%;
+  border: 2px solid #4d4d4d;
+  border-top: none;
   text-align: center;
-  font-size: 0.8em;
+  margin: 65px auto;
+  padding: 0;
+}
+
+.borderDrinks h3 {
+  position: relative;
+  margin-top: 0;
+  display: inline-block;
+  letter-spacing: 4px;
+  top: -9px;
+  margin-bottom: 0;
+}
+
+.top-border {
+  position: absolute;
+  height: 2px;
+  width: 24%;
+  background-color: #4d4d4d;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+fieldset {
+  border: 2px solid #4d4d4d;
+  max-width: 88%;
+  margin: 0 auto;
 }

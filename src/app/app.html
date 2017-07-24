@@ -1,9 +1,48 @@
 <main>
-  <h1 class="title">Hello from Angular !</h1>
+  <h1 class="title">Weding Machine</h1>
+  <div layout="row" class="ng-scope layout-row">
+    <!-- left -->
+    <div flex class="flex">
+      <div layout="column" class="ng-scope layout-column">
+        <md-item-content class="flex">
+          <md-input-container>
+            <h2>Please insert coin :</h2>
+            <input class="ng-pristine ng-valid md-input ng-empty ng-touched" type="text" ng-model="credit">
+          </md-input-container>
+        </md-item-content>
 
-  <!-- Images (and assets) are parsed and loaded from within the public directory -->
-  <img src="/img/logo.png">
+        <md-item-content class="flex">
+          <h2>Your Change:</h2>
+          <div>{{credit | currency:'&euro;'}}</div>
+        </md-item-content>
+      </div>
+    </div>
+    <!-- right -->
+    <div flex class="flex">
+      <h2 class="forSelectDrinks">Please, select drinks:</h2>
+      <label class="forSelect">
+          <select ng-model="item" ng-change="selectSlot(0)" ng-options="drink as drink.name for drink in drinks"></select>
+        </label>
+      <md-list class="borderDrinks">
+        <div class="top-border left"></div>
+        <div class="top-border right"></div>
+        <h3>Prices</h3>
+        <md-list-item class="md-2-line" ng-repeat="drink in drinks">
+          <div class="md-list-item-text">
+            <div>{{drink.name}}: {{drink.price}}€</div>
+          </div>
+        </md-list-item>
+      </md-list>
+    </div>
+  </div>
+  <form>
+    <fieldset>
+      <legend>Change To Client:</legend>
+      <button class="md-icon-button md-raised md-button ng-scope md-ink-ripple md-primary">50¢</button><label for="fifty"></label><output id="fifty" name="f">{{fiftyCents}}</output><br/>
+      <button class="md-icon-button md-raised md-button ng-scope md-ink-ripple md-primary">20¢</button><label for="quarter"></label><output id="quarter" name="q">{{quarter}}</output><br/>
+      <button class="md-icon-button md-raised md-button ng-scope md-ink-ripple md-primary">10¢</button><label for="ten"></label><output id="ten" name="d">{{tenCents}}</output><br/>
+      <button class="md-icon-button md-raised md-button ng-scope md-ink-ripple md-primary">5¢</button><label for="five"></label><output id="five" name="n">{{fiveCents}}</output><br/>
+      <button class="md-icon-button md-raised md-button ng-scope md-ink-ripple md-primary">1¢</button><label for="one"></label><output id="one" name="p">{{oneCent}}</output>
+    </fieldset>
+  </form>
 </main>
-<footer>
-  <a ng-href="{{app.url}}">Webpack Angular Starter</a>
-</footer>
